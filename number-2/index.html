@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-калькулятор стоимости авто</title>
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="page">
+    <form class="form">
+        <h1 class="text title">Калькулятор стоимости</h1>
+        <fieldset class="fieldset cost text">
+            <p class="p">Цена на аукционе, $</p>
+            <input class="price" type="number">
+        </fieldset>
+
+        <fieldset class="fieldset text">
+            <p class="p">Аукцион</p>
+            <select class="auction">
+                <option value="KIA">KIA</option>
+                <option value="BMW">BMW</option>
+                <option value="HONDA">HONDA</option>
+                <option value="VOLKSWAGEN">VOLKSWAGEN</option>
+            </select>
+        </fieldset>
+
+        <fieldset class="fieldset servise text">
+            <p class="p">Тип услуги</p>
+            <div class="container">
+                <label for="servise_1">
+                    <input class="input-servise" type="radio" id="servise_1" name="fieldset_servise" value="5">
+                    <span>Целый автомобиль</span>
+                </label>
+
+                <label for="servise_2">
+                    <input class="input-servise" type="radio" id="servise_2" name="fieldset_servise" value="4.5">
+                    <span>Распил легковой</span>
+                </label>
+
+                <label for="servise_3">
+                    <input class="input-servise" type="radio" id="servise_3" name="fieldset_servise" value="4">
+                    <span>Распил рамный</span>
+                </label>
+
+                <label for="servise_4">
+                    <input class="input-servise" type="radio" id="servise_4" name="fieldset_servise" value="3.5">
+                    <span>Конструктор легковой</span>
+                </label>
+
+                <label for="servise_5">
+                    <input class="input-servise" type="radio" id="servise_5" name="fieldset_servise" value="3">
+                    <span>Конструктор джип</span>
+                </label>
+
+                <label for="servise_6">
+                    <input class="input-servise" type="radio" id="servise_6" name="fieldset_servise" value="2.5">
+                    <span>Запчасти на палете</span>
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset class="fieldset fuel text">
+            <p class="p">Тип топлива</p>
+            <div class="container">
+
+                <label for="fuel_1">
+                    <input class="input-fuel" type="radio" id="fuel_1" name="fieldset_fuel" value="4">
+                    <span>Бензин (включая гибрид)</span>
+                </label>
+
+                <label for="fuel_2">
+                    <input class="input-fuel" type="radio" id="fuel_2" name="fieldset_fuel" value="3">
+                    <span>Дизельное топливо</span>
+                </label>
+
+                <label for="fuel_2">
+                    <input class="input-fuel" type="radio" id="fuel_3" name="fieldset_fuel" value="5">
+                    <span>Электрический двигатель</span>
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset class="fieldset engine-capacity text">
+            <p class="p">Объем двигателя, см3</p>
+            <input class="capacity" type="number">
+        </fieldset>
+
+        <fieldset class="fieldset engine-power text">
+            <p class="p">Мощность, л.с.</p>
+            <input class="power" type="number">
+        </fieldset>
+
+
+        <fieldset class="fieldset age text">
+            <p class="p">Возраст автомобиля</p>
+
+            <div class="container">
+                <label for="age_1">
+                    <input class="input-age" type="radio" id="age_1" name="fieldset_age" value="4">
+                    <span>Меньше 3 лет</span>
+                </label>
+
+                <label for="age_2">
+                    <input class="input-age" type="radio" id="age_2" name="fieldset_age" value="3">
+                    <span>От 3 до 5 лет</span>
+                </label>
+
+                <label for="age_3">
+                    <input class="input-age text" type="radio" id="age_3" name="fieldset_age" value="2">
+                    <span>От 5 до 7 лет</span>
+                </label>
+
+                <label for="age_4">
+                    <input class="input-age text" type="radio" id="age_4" name="fieldset_age" value="1">
+                    <span>Больше 7 лет</span>
+                </label>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="fieldset customer text">
+            <p class="p">Получатель</p>
+
+            <div class="container">
+                <label for="customer_1">
+                    <input class="input-customer" type="radio" id="customer_1" name="fieldset_customer" value="1">
+                    <span>Физическое лицо</span>
+                </label>
+
+                <label for="customer_2">
+                    <input class="input-customer" type="radio" id="customer_2" name="fieldset_customer" value="2">
+                    <span>Юридическое лицо</span>
+                </label>
+            </div>
+        </fieldset>
+        <div class="result">
+            <button class="btn text" type="submit">Рассчитать</button>
+            <div id="result" class="text"></div>
+        </div>
+    </form>
+
+    <script src="./index.js">
+    </script>
+</body>
+
+</html>
